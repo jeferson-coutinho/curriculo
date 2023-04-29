@@ -22,7 +22,7 @@ body {
 #info {
 	display: flex;
 	flex-flow: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	width: 30%;
 }
 
@@ -54,10 +54,17 @@ body {
 	#main {
 		width: 100%;
 	}
+	#profile,
+	#links,
+	#tech,
+	#exp,
+	#student {
+		margin: 40px 10px 15px;
+	}
 }
 
 /* Estilos para telas menores */
-@media (min-width: 712px) and (max-width: 960px){
+@media (min-width: 712px) and (max-width: 960px) {
 
 	#profile,
 	#links,
@@ -69,6 +76,9 @@ body {
 		box-shadow: 1px 1px 5px 0.1px #000;
 		margin: 15px 25%;
 		min-width: 348px;
+	}
+	#profile {
+		margin: 40px auto 15px;
 	}
 
 }
