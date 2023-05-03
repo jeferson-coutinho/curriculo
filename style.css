@@ -3,7 +3,7 @@
 	--text-color: #837E9F;
 	--bg-cards: #302F3D;
 	--bg-techs: #CB92B1;
-	font-family: bold, Merriweather Sans;
+	font-family: Merriweather Sans, sans-serif;
 }
 
 * {
@@ -15,13 +15,25 @@
 body {
 	background-color: var(--body-bg-color);
 	color: var(--text-color);
+}
+
+a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.flex {
 	display: flex;
 	flex-flow: wrap;
 }
 
+.card {
+	background-color: var(--bg-cards);
+	border-radius: 20px;
+	box-shadow: 1px 1px 5px 0.1px #000;
+}
+
 #info {
-	display: flex;
-	flex-flow: wrap;
 	justify-content: space-around;
 	width: 30%;
 }
@@ -35,9 +47,6 @@ body {
 #tech,
 #exp,
 #student {
-	background-color: var(--bg-cards);
-	border-radius: 20px;
-	box-shadow: 1px 1px 5px 0.1px #000;
 	margin: 15px auto;
 	min-width: 348px;
 }
@@ -45,42 +54,6 @@ body {
 #profile {
 	margin: 40px auto 15px;
 	text-align: center;
-}
-
-/* Estilos para telas menores */
-@media screen and (max-width: 1240px) {
-
-	#info,
-	#main {
-		width: 100%;
-	}
-	#profile,
-	#links,
-	#tech,
-	#exp,
-	#student {
-		margin: 40px 10px 15px;
-	}
-}
-
-/* Estilos para telas menores */
-@media (min-width: 712px) and (max-width: 960px) {
-
-	#profile,
-	#links,
-	#tech,
-	#exp,
-	#student {
-		background-color: var(--bg-cards);
-		border-radius: 20px;
-		box-shadow: 1px 1px 5px 0.1px #000;
-		margin: 15px 25%;
-		min-width: 348px;
-	}
-	#profile {
-		margin: 40px auto 15px;
-	}
-
 }
 
 #profile div {
@@ -95,7 +68,6 @@ body {
 
 #profile p {
 	font-size: 23px;
-	font-style: normal;
 	font-weight: 700;
 	line-height: 29px;
 	margin: 0 10px;
@@ -108,44 +80,25 @@ body {
 	margin: 10px 0 49px;
 }
 
-.center {
-	text-align: center;
-}
-
-#links .box {
+.box {
 	align-items: center;
 	display: flex;
-	margin: 19px 0;
+	margin: 20px 0;
 	padding-left: 40px;
 	text-align: left;
 }
 
-#links p {
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 15px;
+#links p,
+#links a,
+#links a:visited {
+	font-size: 13px;
+	line-height: 16px;
 	padding-left: 20px;
-}
-
-#links a {
-	color: var(--text-color);
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 15px;
-	padding-left: 20px;
-	text-decoration: none;
 }
 
 #links a:hover {
-	font-size: 13px;
+	font-size: 14px;
 	transition: font-size 1s ease 0.1ms;
-}
-
-#links a:visited {
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 15px;
-	padding-left: 20px;
 }
 
 #links .box:first-of-type {
@@ -157,7 +110,6 @@ body {
 }
 
 #title {
-	font-style: normal;
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 25px;
@@ -166,15 +118,12 @@ body {
 }
 
 #tech div#techs {
-	display: flex;
-	flex-flow: wrap;
 	justify-content: space-around;
 	margin: 12.5px 30px 30px;
 	max-width: 280px;
 }
 
 #card {
-	align-items: center;
 	background-color: var(--bg-techs);
 	border-radius: 30px;
 	margin: 7.5px 0;
@@ -183,6 +132,7 @@ body {
 }
 
 #tech div#techs p {
+	/*Verificar style*/
 	color: #000;
 	font-size: 10px;
 	font-weight: 700;
@@ -193,7 +143,6 @@ body {
 }
 
 #student p {
-	font-style: normal;
 	font-size: 14px;
 	font-weight: 300;
 	line-height: 18px;
@@ -209,7 +158,6 @@ body {
 
 #list p {
 	font-size: 13px;
-	font-style: normal;
 	font-weight: 300;
 	line-height: 16px;
 	margin: 5px 0;
@@ -218,22 +166,147 @@ body {
 
 #list p:first-of-type {
 	font-size: 16px;
-	font-style: normal;
 	font-weight: 700;
 	line-height: 18px;
 }
 
-#my-projects p,
-#my-posts p {
-	font-weight: 400;
+#my-projects {
+	margin: 40px 40px 30px 0;
+}
+
+#my-projects,
+#my-posts,
+#projects-cards {
+	align-items: center;
+	font-size: 14px;
+	justify-content: space-between;
+	line-height: 20px;
+	margin-right: 40px;
+	max-width: 952px;
+}
+
+#my-projects h2,
+#my-posts h2 {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 25px;
 	padding: 30px;
-	margin: 0;
 }
 
-#main div {
-	border-radius: 20px;
+#my-projects a {
+	line-height: 18px;
+	padding-right: 30px;
 }
 
-#main div:first-of-type {
-	margin: 40px 0px;
+#projects-cards {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.projetc-card {
+	line-height: 20px;
+	margin-bottom: 30px;
+	max-width: 460px;
+	max-height: 186px;
+}
+
+.projetc-card .box {
+	padding-left: 30px;
+}
+
+#projects-cards img {
+	width: 20px;
+}
+
+.projetc-card h3 {
+	font-size: 16px;
+	font-weight: 700;
+	padding: 0 0 0 16px;
+}
+
+.projetc-card > p {
+	padding: 0 10px 20px 30px;
+}
+
+.footer-card {
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 30px 30px;
+}
+
+.footer-card p {
+	padding: 0 16px 0 8px;
+}
+
+.th div {
+	background-color: #E7DE79;
+	border: 2px solid #837E9F;
+	border-radius: 50%;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2.5px;
+	width: 15px;
+}
+
+.footer-card .th p {
+	padding: 0;
+}
+
+/* Estilos para telas menores */
+@media (min-width: 946px) and (max-width: 1240px) {
+
+	#info,
+	#main {
+		width: 100%;
+	}
+
+	#profile,
+	#links,
+	#tech,
+	#exp,
+	#student {
+		margin: 40px auto 15px;
+	}
+
+	#my-projects,
+	#my-posts,
+	#projects-cards {
+		margin: 40px auto 30px;
+	}
+}
+
+@media (min-width: 712px) and (max-width: 946px) {
+
+	#profile,
+	#links,
+	#tech,
+	#exp,
+	#student {
+		margin: 15px 25%;
+		min-width: 348px;
+	}
+
+	#my-projects,
+	#my-posts,
+	#projects-cards {
+		margin: 40px 15px 30px;
+	}
+
+}
+
+@media (max-width: 712px) {
+
+	#my-projects,
+	#my-posts,
+	#projects-cards {
+		margin: 40px 15px 30px;
+	}
+
+	#projects-cards {
+		display: flex;
+		flex: wrap;
+		justify-content: space-between;
+		gap: 30px;
+	}
 }

@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap"
 		rel="stylesheet">
 </head>
-<body>
-	<section id="info">
-		<div id="profile">
-			<div class="center">
+
+<body class="flex">
+	<section id="info" class="flex">
+		<div id="profile" class="card">
+			<div>
 				<img src="foto.png" alt="Foto Jeferson de Sousa Coutinho">
 			</div>
 			<p>Jeferson de Sousa Coutinho</p>
 			<p>Front-End Developer</p>
 		</div>
-		<div id="links">
+		<div id="links" class="card">
 			<div class="box">
 				<img src="assets/map-pin.svg" alt="Local">
 				<p>Brasil</p>
@@ -44,11 +46,11 @@
 				<a href="mailto:jeferson_sousa@yahoo.com.br">jeferson_sousa@yahoo.com.br</a>
 			</div>
 		</div>
-		<div id="tech">
+		<div id="tech" class="card">
 			<div id="title">
 				Tecnologias
 			</div>
-			<div id="techs">
+			<div id="techs" class="flex">
 				<div id="card">
 					<p>HTML</p>
 				</div>
@@ -75,7 +77,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="exp">
+		<div id="exp" class="card">
 			<div id="title">
 				Experiências
 			</div>
@@ -99,7 +101,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="student">
+		<div id="student" class="card">
 			<div id="title">
 				Educação
 			</div>
@@ -119,15 +121,61 @@
 		</div>
 	</section>
 	<section id="main">
-		<div id="my-projects">
-			<p>Meus Projetos</p>
+		<div id="my-projects" class="card flex">
+			<h2>Meus Projetos</h2>
+			<a href="#">Veja todos</a>
 		</div>
-		<div id="project-card-1">
+		<div id="projects-cards">
+			<div class="card projetc-card">
+				<div class="box">
+					<img src="assets/folder.svg" alt="Pasta">
+					<h3>Meu Projeto 1</h3>
+				</div>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae eum vel, neque sequi suscipit
+					aut
+					harum cumque
+				</p>
+				<div class="flex footer-card">
+					<div class="flex">
+						<img src="assets/star.svg" alt="Estrela">
+						<p>100</p>
+						<img src="assets/git-branch.svg" alt="Alfinete">
+						<p>100</p>
+					</div>
+					<div class="flex th">
+						<div>
+						</div>
+						<p>JavaScript</p>
+					</div>
+				</div>
+			</div>
+			<div class="card projetc-card">
+				<div class="box">
+					<img src="assets/folder.svg" alt="Site">
+					<h3>Meu Projeto 2</h3>
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, placeat iure harum quam suscipit
+					iusto odio
+				</p>
+				<div class="flex footer-card">
+					<div class="flex">
+						<img src="assets/star.svg" alt="Estrela">
+						<p>100</p>
+						<img src="assets/git-branch.svg" alt="Alfinete">
+						<p>100</p>
+					</div>
+					<div class="flex th">
+						<div>
+						</div>
+						<p>JavaScript</p>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div id="project-card-2">
-		</div>
-		<div id="my-posts">
-			<p>Meus Posts</p>
+		<div id="my-posts" class="card flex">
+			<h2>Meus Posts</h2>
 		</div>
 		<div id="posts"></div>
 	</section>
